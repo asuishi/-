@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+	<p>我是site 1 页面</p>
+	<iframe name="test"  id="site1" src="./iframe.html"></iframe>
+
+	<script type="text/javascript">
+		
+		var iframe = document.getElementById("site1");
+		iframe.addEventListener("load",()=>{
+			console.log(12);
+			iframe = iframe.contentDocument;
+			iframe.body.style.backgroundColor = "red";
+		},false);
+		
+	</script>
+</body>
+</html>
